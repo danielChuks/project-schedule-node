@@ -25,7 +25,7 @@ app.post('/schedules', async (req, res) => {
     console.log(err.message);
   }
 });
-// create get activity list / getting all the activity link
+// create get activity list / getting all the activity link from the database
 app.get('/schedules', async (req, res) => {
   try {
     const allSchedules = await pool.query('SELECT * FROM schedules');
